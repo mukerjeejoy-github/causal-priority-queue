@@ -37,9 +37,9 @@ print("After popping:", cpq.get_tasks())
 ## 🔍 Benchmarks
 | Data Structure                  | Time Taken (10,000 tasks) |
 | ------------------------------- | ------------------------- |
-| Causal Priority Queue (CPQ)     | 0.019 sec                 |
-| Standard Priority Queue (heapq) | 0.009 sec                 |
-| SortedDict Priority Queue       | 0.006 sec                 |
+| Causal Priority Queue (CPQ)     | 0.034 sec                 |
+| Standard Priority Queue (heapq) | 0.019 sec                 |
+| SortedDict Priority Queue       | 0.011 sec                 |
 
 ## 🤝 Contributing
 1. Fork the repository.
