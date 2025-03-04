@@ -146,9 +146,9 @@ Where:
 
 ---
 
-##  Real-World Use Cases
+# **Real-World Use Cases for Causal Priority Queue (CPQ)**
 
-###  Healthcare: Dynamic Patient Triage
+## **Healthcare: Dynamic Patient Triage**
 ```python
 cpq.add_task("Patient A", priority=5, influences=["Patient B"], influence_weight=3)
 cpq.add_task("Patient B", priority=2)
@@ -157,7 +157,59 @@ print("Before popping:", cpq.get_tasks())
 print("Popped:", cpq.pop_task())
 print("After popping:", cpq.get_tasks())
 ```
- **🔹 When Patient A is treated, Patient B’s priority increases, ensuring urgent cases are handled efficiently.**
+🔹 **When Patient A is treated, Patient B’s priority increases, ensuring urgent cases are handled efficiently.**
+
+---
+
+## **Task Scheduling: Dynamically Prioritizing Jobs Based on Dependencies**
+```python
+cpq.add_task("Build Backend", priority=5, influences=["Deploy Application"], influence_weight=3)
+cpq.add_task("Deploy Application", priority=2)
+
+print("Before execution:", cpq.get_tasks())
+print("Popped Task:", cpq.pop_task())
+print("After execution:", cpq.get_tasks())
+```
+🔹 **As backend development is completed, deployment becomes a higher priority automatically.**
+
+---
+
+## **AI & Game Development: Adaptive NPC Decision Making**
+```python
+cpq.add_task("Enemy Attack", priority=7, influences=["Defend Player"], influence_weight=2)
+cpq.add_task("Defend Player", priority=3)
+
+print("Before attack resolution:", cpq.get_tasks())
+print("Popped:", cpq.pop_task())
+print("After attack resolution:", cpq.get_tasks())
+```
+🔹 **If an enemy attack occurs, defense mechanisms react dynamically by adjusting their priority.**
+
+---
+
+## **Financial Trading: Optimizing Order Execution**
+```python
+cpq.add_task("Stock Buy Order A", priority=8, influences=["Stock Buy Order B"], influence_weight=2)
+cpq.add_task("Stock Buy Order B", priority=4)
+
+print("Before executing orders:", cpq.get_tasks())
+print("Popped:", cpq.pop_task())
+print("After executing orders:", cpq.get_tasks())
+```
+🔹 **Orders dynamically adjust based on executed trades, improving financial strategy.**
+
+---
+
+## **Cybersecurity: Adaptive Threat Response**
+```python
+cpq.add_task("Critical Firewall Breach", priority=9, influences=["DDoS Attack Mitigation"], influence_weight=3)
+cpq.add_task("DDoS Attack Mitigation", priority=5)
+
+print("Before mitigating threats:", cpq.get_tasks())
+print("Popped:", cpq.pop_task())
+print("After mitigating threats:", cpq.get_tasks())
+```
+🔹 **As high-priority threats are addressed, secondary mitigation strategies adjust dynamically.**
 
 ---
 
