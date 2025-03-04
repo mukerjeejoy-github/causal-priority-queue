@@ -17,7 +17,7 @@ pip install causal-priority-queue
 Once installed, you can import it in your Python scripts:
 
 ```python
-from causal-priority-queue import CausalPriorityQueue
+from causal_priority_queue import CausalPriorityQueue
 ```
 
 ---
